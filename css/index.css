@@ -1,26 +1,94 @@
 /*CSS RESET*/
-html, body, div, span, applet, object, iframe,  
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
-a, abbr, acronym, address, big, cite, code,  
-del, dfn, em, img, ins, kbd, q, s, samp,  
-small, strike, strong, sub, sup, tt, var,  
-b, u, i, center,  
-dl, dt, dd, ol, ul, li,  
-fieldset, form, label, legend,  
-table, caption, tbody, tfoot, thead, tr, th, td,  
-article, aside, canvas, details, embed,  
-figure, figcaption, footer, header, hgroup,  
-menu, nav, output, ruby, section, summary,  
-time, mark, audio, video {  
-margin: 0;  
-padding: 0;  
-border: 0;  
-font-size: 62.5%;  
-font: inherit;  
-vertical-align: baseline;  
-box-sizing: border-box;
-font-family: 'Cormorant', sans-serif;
-/* max-width: 100%; */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 62.5%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: 'Cormorant', sans-serif;
+    /* max-width: 100%; */
 }
 
 /* GENERAL STYLES */
@@ -35,23 +103,24 @@ header {
     background-repeat: no-repeat;
 }
 
-.headerTitle{
-    width: 100%;
+.headerTitle {
+    /* width: 100%; not needed as we dont want the background color to stretch across the page. */
     display: flex;
     flex-direction: column;
+    margin-left: 5%;
 }
 
-.headerTitle h1{
-    text-align: left; 
+.headerTitle h1 {
+    text-align: left;
     margin-top: 6%;
 }
 
-.headerTitle h2{
+.headerTitle h2 {
     padding: 1% 0 0 5%;
     text-align: left;
 }
 
-nav{
+nav {
     height: 5rem;
     top: 0;
     position: relative;
@@ -62,59 +131,58 @@ nav{
     background-color: #e39368;
 }
 
-.fixed-nav nav{
+.fixed-nav nav {
     position: fixed;
     /* box-shadow: ; */
     background-color: #b0cf85;
 }
 
-nav a{
+nav a {
     letter-spacing: 2px;
     font-size: 1rem;
     font-weight: bolder;
     color: black;
 }
 
-a:hover{
+a:hover {
     color: orange;
 }
 
-header div a{
+header div a {
     color: black;
 }
 
-section{
+section {
     background-color: lightyellow;
     padding: 10%;
     font-size: 1.2rem;
 }
 
-.products{
+.products {
     text-align: center;
 }
 
-.containerProducts{
+.containerProducts {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.containerProducts div{
+.containerProducts div {
     /* width: 100%; would have rather have the image width constrain size */
     text-align: center;
     border: 2px solid lightgray;
     overflow: hidden;
-    /* padding: 5% 0; */
     margin-bottom: 5%;
 }
 
-.containerProducts div img{
+.containerProducts div img {
     max-width: 100%;
-    height: auto;   
+    height: auto;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -125,18 +193,18 @@ footer{
 }
 
 /* FONTS */
-h1{
+h1 {
     font-family: 'Comfortaa', sans-serif;
     font-size: 4.8em;
     text-shadow: 5px 5px lightgoldenrodyellow;
 }
 
-h2{
+h2 {
     font-family: 'Cormorant', sans-serif;
     font-size: 1.4rem;
 }
 
-h3{
+h3 {
     font-family: 'Cormorant', sans-serif;
     font-size: 1rem;
     font-weight: bold;
@@ -147,19 +215,37 @@ h3{
 /* MOBILE STYLES */
 
 /* IPHONE/MOBILE */
-@media screen and (min-width: 375px){
-}
+@media screen and (min-width: 375px) {}
 
 /* SMALL TABLET */
-@media screen and (min-width: 620px){
+@media screen and (min-width: 460px) {
+    header {
+        background-position: 45% 72%;
+        background-repeat: no-repeat;
+    }
 }
 
 /* LARGE TABLETS AND SMALL LAPTOPS */
-@media screen and (min-width: 960px){
-    
+@media screen and (min-width: 960px) {
+    header {
+        background-size: 100%;
+        /* background-position: bottom; */
+        background-repeat: no-repeat;
+    }
 }
 
 /* DESKTOP STYLES */
-@media screen and (min-width: 1200px){
-    
+@media screen and (min-width: 1200px) {
+    header {
+        background-attachment: fixed;
+        background-position: bottom;
+    }
+
+    .headerTitle h1{
+        background-color: #b0cf85;
+    }
+
+    .headerTitle h2{
+        background-color: #b0cf85;
+    }
 }
