@@ -19,6 +19,7 @@ font-size: 62.5%;
 font: inherit;  
 vertical-align: baseline;  
 box-sizing: border-box;
+font-family: 'Cormorant', sans-serif;
 }
 
 /* GENERAL STYLES */
@@ -44,18 +45,48 @@ h1{
 }
 
 h2{
-    font-family: 'Cormorant', sans-serif;
     font-size: 2rem;
 }
 
 nav{
-    background-color: lightyellow;
+    background-color: yellow;
     top: 0;
     bottom: 100%;
     position: relative;
     display: flex;
 }
 
-.logo{
-    height: 1vh;
+nav div{
+    display: flex;
+}
+
+.logo img{
+    max-width: 0;
+    margin: .5rem;
+}
+
+.links{
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: 3px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+a:hover{
+    color: orange;
+}
+
+header div a{
+    color: black;
+}
+
+section{
+    background-color: lightyellow;
+    padding: 50px;
+}
+
+section div{
+    background-color: white;
 }
