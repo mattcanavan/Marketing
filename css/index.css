@@ -20,32 +20,35 @@ font: inherit;
 vertical-align: baseline;  
 box-sizing: border-box;
 font-family: 'Cormorant', sans-serif;
+/* max-width: 100%; */
 }
 
 /* GENERAL STYLES */
+
+/* BASE STYLES */
 header {
     display: flex;
-    background-image: url("../assets/header.jpg");
-    height: 80vh;
+    background-image: url("../assets/header1-1.jpg");
+    height: 60vh;
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    justify-content: right;
-    align-items: center;
 }
 
 .headerTitle{
-    width: 40%;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-h1{
-    font-family: 'Comfortaa', sans-serif;
-    font-size: 9.5rem;
+.headerTitle h1{
+    text-align: left; 
+    margin-top: 6%;
 }
 
-h2{
-    font-size: 2rem;
+.headerTitle h2{
+    padding: 1% 0 0 5%;
+    text-align: left;
 }
 
 nav{
@@ -56,7 +59,7 @@ nav{
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    background-color: lightyellow;
+    background-color: #e39368;
 }
 
 .fixed-nav nav{
@@ -66,12 +69,11 @@ nav{
 }
 
 nav a{
-    letter-spacing: 3px;
-    font-size: 1.4rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
     font-weight: bolder;
     color: black;
 }
-
 
 a:hover{
     color: orange;
@@ -83,24 +85,81 @@ header div a{
 
 section{
     background-color: lightyellow;
-    padding: 50px 150px;
+    padding: 10%;
     font-size: 1.2rem;
 }
 
-.container{
+.products{
+    text-align: center;
+}
+
+.containerProducts{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
 }
 
-.container div{
-    width: 33%;
-    border: 2px black solid;
+.containerProducts div{
+    /* width: 100%; would have rather have the image width constrain size */
     text-align: center;
-    padding: 5% 0;
+    border: 2px solid lightgray;
     overflow: hidden;
+    /* padding: 5% 0; */
+    margin-bottom: 5%;
 }
 
-.container div img{
+.containerProducts div img{
     max-width: 100%;
-    height: auto;
+    height: auto;   
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #b0cf85;
+    font-size: 1rem;
+    height: 2.5rem;
+}
+
+/* FONTS */
+h1{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 4.8em;
+    text-shadow: 5px 5px lightgoldenrodyellow;
+}
+
+h2{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+/* MOBILE STYLES */
+
+/* IPHONE/MOBILE */
+@media screen and (min-width: 375px){
+}
+
+/* SMALL TABLET */
+@media screen and (min-width: 620px){
+}
+
+/* LARGE TABLETS AND SMALL LAPTOPS */
+@media screen and (min-width: 960px){
+    
+}
+
+/* DESKTOP STYLES */
+@media screen and (min-width: 1200px){
+    
 }
