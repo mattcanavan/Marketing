@@ -96,6 +96,8 @@ video {
 /* BASE STYLES */
 header {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url("../assets/header1-1.jpg");
     height: 60vh;
     background-size: cover;
@@ -107,17 +109,20 @@ header {
     /* width: 100%; not needed as we dont want the background color to stretch across the page. */
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+    align-items: center;
 }
 
 .headerTitle h1 {
-    text-align: left;
-    margin-top: 6%;
+    background-color:  	rgb(176, 207, 133, .8);
+    margin-bottom: 5%;
+    padding: 2%;
+    border-radius: 5%;
 }
 
 .headerTitle h2 {
-    padding: 1% 0 0 5%;
-    text-align: left;
+    padding: 2%;
+    background-color:  	rgb(176, 207, 133, .8);
+    border-radius: 5%;
 }
 
 nav {
@@ -195,7 +200,7 @@ footer {
 /* FONTS */
 h1 {
     font-family: 'Comfortaa', sans-serif;
-    font-size: 4.8em;
+    font-size: 5rem;
     text-shadow: 5px 5px lightgoldenrodyellow;
 }
 
@@ -210,6 +215,10 @@ h3 {
     font-weight: bold;
 }
 
+p{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 1rem;
+}
 
 
 /* MOBILE STYLES */
@@ -232,6 +241,21 @@ h3 {
         /* background-position: bottom; */
         background-repeat: no-repeat;
     }
+    h1{
+        font-size: 9rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    nav a{
+        font-size: 1.5rem;
+    }
 }
 
 /* DESKTOP STYLES */
@@ -241,11 +265,32 @@ h3 {
         background-position: bottom;
     }
 
-    .headerTitle h1{
-        background-color: #b0cf85;
-    }
+   
+}
 
-    .headerTitle h2{
-        background-color: #b0cf85;
-    }
+/* ABOUT STYLING */
+#about{
+    display: flex;
+    flex-direction: column;
+}
+
+#about h2{
+    text-align: center;
+}
+
+#about div{
+    border: 2px dashed;
+    padding: 5%;
+}
+
+#donate{
+    display: flex;
+    justify-content: center;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
